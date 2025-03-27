@@ -8,11 +8,11 @@
     <artifactId>oop-training</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.junit/junit5-engine -->
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
         <dependency>
-            <groupId>org.junit</groupId>
-            <artifactId>junit5-engine</artifactId>
-            <version>5.0.0-ALPHA</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.13.0-M2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

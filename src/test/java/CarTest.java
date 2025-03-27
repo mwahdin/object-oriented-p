@@ -1,7 +1,20 @@
+import org.junit.jupiter.api.Test;
+
+
 public class CarTest {
 
-    class car{
+    @Test
+    void moveWhenCarIsClosedAndLightIsOn() {
+        new Car();
+    }
 
+
+    class Car{
+
+        Car(){
+            System.out.println("hello");
+        }
+        
         boolean isDorCarOpen;
         boolean isCarOn;
 
