@@ -5,7 +5,11 @@ public class CarTest {
 
     @Test
     void moveWhenCarIsClosedAndLightIsOn() {
-        new Car();
+
+        Car pride = new Car("pride");
+        pride.carDorOpen();
+        pride.carDorClose();
+        pride.movingCar();
     }
 
 
@@ -14,9 +18,13 @@ public class CarTest {
         Car(){
             System.out.println("hello");
         }
+        Car(String mark){
+            this.mark = mark;
+        }
         
         boolean isDorCarOpen;
         boolean isCarOn;
+        String mark;
 
         //method
 
