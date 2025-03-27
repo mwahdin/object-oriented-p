@@ -1,22 +1,39 @@
 import org.junit.jupiter.api.Test;
 
+import static java.lang.System.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class CarTest {
 
     @Test
     void moveWhenCarIsClosedAndLightIsOn() {
 
-        Car pride = new Car("pride");
-        pride.carDorOpen();
-        pride.carDorClose();
-        pride.movingCar();
+        //given
+        Car benz = new Car("benz");
+        Car bmw = new Car("BMW");
+
+        //when
+        boolean carRunning = benz.isCarRunning();
+        bmw.carIsOn();
+        boolean bmwIsMoving = bmw.isCarRunning();
+
+        //then
+        assertFalse(carRunning);
+        assertTrue(bmwIsMoving);
+
+//        Car pride = new Car("pride");
+//        pride.carDorOpen();
+//        pride.carDorClose();
+//        pride.movingCar();
     }
 
 
     class Car{
 
         Car(){
-            System.out.println("hello");
+            out.println("hello");
         }
         Car(String mark){
             this.mark = mark;
@@ -29,28 +46,30 @@ public class CarTest {
         //method
 
         void carIsOn(){
-            System.out.println("car is On");
+            out.println("car is On");
             isCarOn = true;
         }
 
         void carIsOof(){
-            System.out.println("car is Off");
+            out.println("car is Off");
             isCarOn = false;
         }
 
         void carDorOpen(){
-            System.out.println("dor is Open");
+            out.println("dor is Open");
         }
         void carDorClose(){
-            System.out.println("dor is Closes");
+            out.println("dor is Closes");
         }
 
 
-        void movingCar(){
+        boolean isCarRunning(){
             if(!isDorCarOpen && isCarOn){
-                System.out.println("the car can Move");
+                out.println("the car can Move");
+                return true;
             }else{
-                System.out.println("the car can't Move");
+                out.println("the car can't Move");
+                return false;
             }
         }
     }
