@@ -14,9 +14,10 @@ public class CarTest {
         Car benz = new Car("benz");
         Car bmw = new Car("BMW");
 
+
         //when
         boolean benzRunning = benz.isRunning();
-        bmw.IsOn();
+        bmw.moverIsOn();
         boolean bmwIsMoving = bmw.isRunning();
 
         //then

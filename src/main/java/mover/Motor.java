@@ -1,18 +1,8 @@
 package mover;
 
-public class Motor {
+public class Motor extends mover{
 
-    boolean isOn;
-
-    void motorIsOn(){
-        isOn = true;
-    }
-
-    void motorIsOff(){
-        isOn = false;
-    }
-
-    public boolean isRunning() {
+        public boolean isRunning() {
         if (isOn) {
             System.out.println("is on");
             return true;

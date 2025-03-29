@@ -2,7 +2,7 @@ package mover;
 
 import static java.lang.System.out;
 
-public class Car {
+public class Car extends mover implements Gearbox, HaveBox {
 
         Car(){
             out.println("hello");
@@ -12,20 +12,9 @@ public class Car {
         }
 
         boolean isDorOpen;
-        boolean isOn;
         String mark;
 
-        //method
-
-        public void IsOn(){
-            out.println("car is On");
-            isOn = true;
-        }
-
-        void IsOof(){
-            out.println("car is Off");
-            isOn = false;
-        }
+        //methods
 
         void dorOpen(){
             out.println("dor is Open");
@@ -44,4 +33,14 @@ public class Car {
                 return false;
             }
         }
+
+    @Override
+    public String GearboxType() {
+        return "automatic";
+    }
+
+    @Override
+    public int BoxCapacity() {
+        return 100;
+    }
 }
