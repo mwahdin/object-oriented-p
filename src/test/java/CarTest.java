@@ -1,3 +1,4 @@
+import mover.Car;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -14,12 +15,12 @@ public class CarTest {
         Car bmw = new Car("BMW");
 
         //when
-        boolean carRunning = benz.isCarRunning();
-        bmw.carIsOn();
-        boolean bmwIsMoving = bmw.isCarRunning();
+        boolean benzRunning = benz.isRunning();
+        bmw.IsOn();
+        boolean bmwIsMoving = bmw.isRunning();
 
         //then
-        assertFalse(carRunning);
+        assertFalse(benzRunning);
         assertTrue(bmwIsMoving);
 
     }

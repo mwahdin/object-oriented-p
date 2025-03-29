@@ -1,3 +1,5 @@
+package mover;
+
 import static java.lang.System.out;
 
 public class Car {
@@ -5,40 +7,40 @@ public class Car {
         Car(){
             out.println("hello");
         }
-        Car(String mark){
+        public Car(String mark){
             this.mark = mark;
         }
 
-        boolean isDorCarOpen;
-        boolean isCarOn;
+        boolean isDorOpen;
+        boolean isOn;
         String mark;
 
         //method
 
-        void carIsOn(){
+        public void IsOn(){
             out.println("car is On");
-            isCarOn = true;
+            isOn = true;
         }
 
-        void carIsOof(){
+        void IsOof(){
             out.println("car is Off");
-            isCarOn = false;
+            isOn = false;
         }
 
-        void carDorOpen(){
+        void dorOpen(){
             out.println("dor is Open");
         }
-        void carDorClose(){
+        void DorClose(){
             out.println("dor is Closes");
         }
 
 
-        boolean isCarRunning(){
-            if(!isDorCarOpen && isCarOn){
-                out.println("the car can Move");
+        public boolean isRunning(){
+            if(!isDorOpen && isOn){
+                out.println("can Move");
                 return true;
             }else{
-                out.println("the car can't Move");
+                out.println("can't Move");
                 return false;
             }
         }
